@@ -4,8 +4,16 @@ import TileHeader from '../various/TileHeader';
 import TileUnderHeader from '../various/TileUnderHeader';
 import TileContent from '../various/TileContent';
 import Button from '../various/Button';
+import {useHistory} from 'react-router-dom';
+import {LIST} from '../../routes/open';
 
 function Dashboard() {
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push(LIST);
+  };
+
   return (
     <div className={'d-flex w-100 h-100 flex-wrap'}>
       <Tile>
@@ -23,7 +31,7 @@ function Dashboard() {
             Donec vel odio et leo dignissim interdum non vitae neque. Donec ullamcorper ex eros, vel fermentum tellus ullamcorper a. Cras volutpat orci ipsum, et rhoncus velit pretium in. Duis arcu nulla, congue in vulputate eget, feugiat congue ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam hendrerit sollicitudin ante, et rhoncus odio molestie in.
           </p>
         </TileContent>
-        <Button>
+        <Button onClick={handleClick}>
           Zobacz więcej
         </Button>
       </Tile>
@@ -68,4 +76,5 @@ function Dashboard() {
     </div>
   );
 }
+
 export default Dashboard;

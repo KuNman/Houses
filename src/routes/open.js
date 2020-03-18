@@ -2,14 +2,21 @@ import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 
 const DASHBOARD = '/';
+const LIST = '/list';
 
 const Dashboard = React.lazy(() => import('../components/dashboard'));
+const List = React.lazy(() => import('../components/houses/list'));
 
 const openRoutes = [
   {
     path: DASHBOARD,
     exact: true,
     component: Dashboard,
+  },
+  {
+    path: LIST,
+    exact: true,
+    component: List,
   },
 ];
 
@@ -26,4 +33,4 @@ const OpenRoutes = () => {
   </Switch>;
 };
 
-export {OpenRoutes};
+export {OpenRoutes, LIST};
