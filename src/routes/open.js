@@ -3,9 +3,11 @@ import {Route, Switch} from 'react-router-dom';
 
 const DASHBOARD = '/';
 const LIST = '/list';
+const DETAILS = '/details/';
 
 const Dashboard = React.lazy(() => import('../components/dashboard'));
 const List = React.lazy(() => import('../components/houses/list'));
+const Details = React.lazy(() => import('../components/houses/details'));
 
 const openRoutes = [
   {
@@ -17,6 +19,10 @@ const openRoutes = [
     path: LIST,
     exact: true,
     component: List,
+  },
+  {
+    path: DETAILS,
+    component: Details,
   },
 ];
 
@@ -33,4 +39,4 @@ const OpenRoutes = () => {
   </Switch>;
 };
 
-export {OpenRoutes, LIST};
+export {OpenRoutes, LIST, DETAILS};

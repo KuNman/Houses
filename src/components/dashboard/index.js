@@ -69,7 +69,7 @@ function Dashboard() {
             Sed porta mi sem, sit amet fermentum lectus hendrerit et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In eu scelerisque metus. Aenean placerat mollis lectus sed condimentum. Aliquam erat volutpat. Ut sed felis eget risus vulputate finibus eu fringilla metus.
           </p>
         </TileContent>
-        <Button>
+        <Button onClick={handleClick}>
           Zobacz więcej
         </Button>
       </Tile>

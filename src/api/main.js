@@ -1,3 +1,5 @@
+window.axios = require('axios');
+
 const url = 'http://mr-test-backend.sadek.usermd.net/';
 
 window.axios.interceptors.response.use((res) => res, (error) => {
